@@ -1,0 +1,59 @@
+\NeedsTeXFormat{LaTeX2e}
+\documentclass[english]{curve}
+\usepackage[utf8]{inputenc}
+\usepackage[plmath,OT4]{polski}
+\usepackage{fullpage}
+\usepackage{nopageno}
+\usepackage{url}
+
+\leftheader{%
+  Date of birth: 07/12/1984\\
+}
+
+\rightheader{%
+  Github: \url{www.github.com/pietia}\\
+  Github: \url{www.github.com/appgrinder}\\
+  E-mail: \texttt{piotr@gega.io}\\
+  E-mail: \texttt{pietia@appgrinder.pl}\\
+  Skype: \texttt{pietia.moo}\\
+  GSM:  +48 504 573 481\\
+}
+
+\title{Piotr Gęga}
+\subtitle{(J)Ruby developer, JVM fan, Eurucamp coorganizer, F/OSS suporter}
+
+%\photo{photo.jpg}
+
+\setlength\subrubricspace{3pt}
+
+\usepackage{color}
+\makeatletter
+\def\@@rubrichead#1{%
+  \@rubricfont%
+  \makebox[0pt][l]{\colorbox[gray]{0.7}{\makebox[\@almosttextwidth-\hfuzz]{}}}%
+  \makebox[\@almosttextwidth-\hfuzz][c]{#1}\par\vspace\rubricspace}
+\def\@@subrubric#1{%
+  \parbox{0cm}{%
+    \raisebox{\@beforespace}{\@subrubricfont%
+      \makebox[1ex][l]{\colorbox[gray]{0.7}{\textcolor[gray]{0.7}{M}}}#1}%
+    \par\vspace\subrubricspace}%
+  \@subrubricmark{#1}}
+\makeatother
+
+\begin{document}
+
+\makeheaders[t]
+\maketitle
+
+\makerubric{education}
+% \makerubric{goals}
+\makerubric{nonprofit}
+\makerubric{experience}
+% \makerubric{achievements}
+\makerubric{skills}
+\makerubric{misc}
+
+%\scriptsize{\emph{Wyrażam zgodę na przetwarzanie moich danych osobowych zawartych w mojej ofercie pracy dla potrzeb niezbędnych
+% do realizacji procesu rekrutacji (zgodnie z Ustawą z dn. 29.08.97 o Ochronie danych Osobowych Dz. U. nr 133 poz. 883 z póżn. zm.).}}
+
+\end{document}
